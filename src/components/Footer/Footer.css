@@ -1,0 +1,219 @@
+.ft {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  background: #edf2ec;
+}
+
+.ft-m {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px 19px 40px;
+  background: #edf2ec;
+}
+.ft-m .logo { margin: 0; }
+.ft-m-about { margin-top: 18px; max-width: 24em; font-size: 16px; line-height: 1.35; color: #16211a; }
+.ft-m-head { margin-top: 36px; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 18px; color: #16211a; }
+.ft-m-line { margin-top: 14px; font-size: 16px; color: #16211a; }
+.ft-m-head + .ft-m-line { margin-top: 18px; }
+.ft-m-social { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 36px; list-style: none; }
+.ft-m-social a {
+  display: flex; align-items: center; justify-content: center;
+  height: 34px; padding: 0 16px; border: 1px solid #7a857d; border-radius: 999px;
+  font-size: 15px; color: #6b756e; transition: background-color 0.3s ease, color 0.3s ease;
+}
+.ft-m-social a:hover { background: #2f6b3f; border-color: #2f6b3f; color: #fff; }
+.ft-m-copy { margin-top: 36px; font-size: 14px; color: #7a857d; }
+.ft-m-legal { margin-top: 14px; font-size: 14px; color: #7a857d; }
+.ft-m-legal a { text-decoration: underline; text-underline-offset: 3px; }
+
+@media (max-width: 767px) {
+  .ft { min-height: 0; }
+  .ft-scene, .ft-bar { display: none; }
+}
+
+@media (min-width: 768px) {
+  .ft-m { display: none; }
+}
+
+.ft-scene {
+  position: relative;
+  flex: 1 0 auto;
+  min-height: 80vw;
+  overflow: hidden;
+}
+
+.ft-bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* logo + wordmark sit behind the garden photo so trees and hills overlap them */
+.ft-lockup {
+  position: absolute;
+  left: 6vw;
+  bottom: 48vw;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  will-change: transform, opacity;
+}
+
+.ft-mark { width: 18vw; height: auto; flex: none; }
+
+.ft-word { position: relative; padding-top: 5vw; }
+
+.ft-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.6vw;
+  line-height: 1;
+  color: #16211a;
+  white-space: nowrap;
+}
+
+.ft-name {
+  display: block;
+  font-family: 'Antonio', Impact, sans-serif;
+  font-weight: 700;
+  font-size: 14.5vw;
+  line-height: 0.86;
+  color: #12291f;
+  white-space: nowrap;
+}
+
+.ft-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 5vw;
+  transform: translateX(-50%);
+  width: 92vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px 24px;
+  padding: 14px 18px;
+  border-radius: 28px;
+  background: #fff;
+  z-index: 2;
+}
+
+.ft-links,
+.ft-social {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.ft-links { flex-wrap: wrap; justify-content: center; gap: 4px 0; }
+
+.ft-links li { display: flex; align-items: center; }
+.ft-links li + li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  margin: 0 14px;
+  border-radius: 50%;
+  background: #3e7b4e;
+}
+
+.ft-links a {
+  font-size: 16px;
+  color: #16211a;
+  transition: color 0.3s ease;
+}
+.ft-links a:hover { color: #3e7b4e; }
+
+.ft-social { gap: 10px; }
+.ft-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d9e1da;
+  border-radius: 50%;
+  color: #16211a;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.ft-social a:hover { background: #2f6b3f; border-color: #2f6b3f; color: #fff; }
+
+.ft-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px 22px;
+  text-align: center;
+}
+
+.ft-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+  font-size: 14px;
+  color: #16211a;
+}
+.ft-legal a:hover { color: #3e7b4e; }
+
+.ft-motto {
+  font-size: 18px;
+  color: #16211a;
+}
+
+@media (min-width: 768px) {
+  .ft-scene { min-height: 45.5vw; }
+
+  .ft-lockup { left: 14.2vw; bottom: 28.2vw; gap: 3.3vw; }
+  .ft-mark { width: 12.1vw; }
+  .ft-word { padding-top: 0; }
+  .ft-tag { top: -1.9vw; right: 1vw; font-size: clamp(11px, 1.2vw, 23px); }
+  .ft-name { font-size: 9.93vw; }
+
+  .ft-nav {
+    bottom: 3.45vw;
+    width: auto;
+    flex-wrap: nowrap;
+    gap: 3vw;
+    padding: 0 1.15vw 0 2.46vw;
+    height: 3.98vw;
+    min-height: 52px;
+    border-radius: 999px;
+  }
+
+  .ft-links { flex-wrap: nowrap; }
+  .ft-links li + li::before { width: 0.27vw; height: 0.27vw; min-width: 4px; min-height: 4px; margin: 0 1.4vw; }
+  .ft-links a { font-size: clamp(14px, 1.157vw, 22.2px); }
+
+  .ft-social { gap: 0.65vw; }
+  .ft-social a { width: 2vw; height: 2vw; min-width: 30px; min-height: 30px; }
+  .ft-social svg { width: 0.75vw; height: 0.75vw; min-width: 12px; min-height: 12px; }
+
+  .ft-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 2.72vw;
+    padding: 0 4.17vw;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .ft-legal { font-size: clamp(13px, 0.94vw, 18px); gap: 0 1vw; flex-wrap: nowrap; }
+  .ft-motto { font-size: clamp(15px, 1.25vw, 24px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ft-links a, .ft-social a { transition: none; }
+}

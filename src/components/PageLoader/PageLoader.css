@@ -1,0 +1,37 @@
+.pl {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pl[style*='visibility: visible'] { pointer-events: all; }
+
+.pl-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pl-mark {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  transform-origin: 50% 50%;
+}
+
+.pl-name {
+  font-family: 'Antonio', Impact, sans-serif;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #10261b;
+  white-space: nowrap;
+}

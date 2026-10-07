@@ -1,0 +1,140 @@
+.ci {
+  background: #edf2ec;
+  padding: 8px 0 48px;
+}
+
+.ci-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.ci-track {
+  display: flex;
+  width: max-content;
+  animation: ci-scroll 28s linear infinite;
+}
+
+.ci-set {
+  display: flex;
+  flex: none;
+  align-items: center;
+  list-style: none;
+}
+
+.ci-set li {
+  display: flex;
+  align-items: center;
+}
+
+.ci-set span {
+  font-family: 'Antonio', Impact, sans-serif;
+  font-weight: 700;
+  font-size: clamp(36px, 3.75vw, 72px);
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7a857d;
+}
+
+.ci-spark {
+  flex: none;
+  width: clamp(14px, 1.6vw, 31px);
+  height: clamp(14px, 1.6vw, 31px);
+  margin: 0 clamp(14px, 2.1vw, 40px);
+  color: #3f4b44;
+}
+
+@keyframes ci-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ci-cards {
+  display: grid;
+  gap: 16px;
+  padding: 24px 20px 0;
+}
+
+.ci-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 28px 24px 24px;
+  border-radius: 24px;
+  background: #fbfdfb;
+  color: #16211a;
+}
+
+.ci-icon { width: 28px; height: 28px; flex: none; }
+
+.ci-title {
+  margin-top: 32px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(28px, 7vw, 36px);
+  line-height: normal;
+  letter-spacing: 0;
+  color: #16211a;
+}
+
+.ci-text {
+  max-width: 28.2em;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #16211a;
+  opacity: 0.72;
+}
+
+.ci-lines {
+  margin-top: auto;
+  padding-top: 28px;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.ci-lines span { color: #7a857d; }
+.ci-lines a { color: #16211a; font-weight: 500; transition: color 0.3s ease; }
+.ci-lines a:hover { color: #2f6b3f; }
+
+@media (min-width: 768px) {
+  .ci { padding: 0.3vw 0 3.2vw; }
+
+  .ci-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.05vw;
+    padding: 4vw 4.17vw 0;
+  }
+
+  .ci-card {
+    min-height: 0;
+    height: 25.8vw;
+    padding: 2.3vw 2vw 2vw;
+    border-radius: 2.3vw;
+  }
+
+  .ci-icon { width: 1.9vw; height: 1.9vw; min-width: 22px; min-height: 22px; }
+
+  .ci-title {
+    margin-top: 2.8vw;
+    font-size: clamp(26px, 2.5vw, 48px);
+  }
+
+  .ci-text {
+    margin-top: 0.75vw;
+    font-size: clamp(14px, 1.25vw, 24px);
+    line-height: normal;
+  }
+
+  .ci-lines {
+    padding-top: 0;
+    font-size: clamp(12px, 1.042vw, 20px);
+    line-height: 1.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ci-track { animation: none; }
+  .ci-lines a { transition: none; }
+}

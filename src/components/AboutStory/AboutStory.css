@@ -1,0 +1,27 @@
+.as {
+  background: #edf2ec;
+  padding: 48px 20px 56px;
+}
+
+.as-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.as-text {
+  max-width: 29em;
+  margin-top: 20px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(20px, 2.12vw, 41px);
+  line-height: 1.45;
+  letter-spacing: 0;
+  color: #16211a;
+}
+
+@media (min-width: 768px) {
+  .as { padding: 4.4vw 5.8vw 3.4vw; }
+  .as-text { margin-top: 1.9vw; }
+}

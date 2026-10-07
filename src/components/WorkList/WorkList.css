@@ -1,0 +1,178 @@
+.wl {
+  background: #edf2ec;
+  padding: 24px 20px 56px;
+}
+
+.wl-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 28px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.wl-pill {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #e3ebe3;
+  color: rgba(22, 33, 26, 0.55);
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.wl-pill:hover { color: #16211a; }
+.wl-pill.is-active { background: #2f6b3f; color: #fff; }
+
+.wl-list { container-type: inline-size; }
+
+.wl-row {
+  display: grid;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(22, 33, 26, 0.09);
+}
+.wl-row:last-child { border-bottom: 0; }
+
+.wl-media {
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 1.3;
+}
+
+.wl-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.wl-row:hover .wl-media img { transform: scale(1.05); }
+
+.wl-body { display: flex; flex-direction: column; }
+
+.wl-title {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #16211a;
+}
+
+.wl-text {
+  max-width: 34em;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #16211a;
+  opacity: 0.72;
+}
+
+.wl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  list-style: none;
+}
+
+.wl-tags li {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #fff;
+  color: #16211a;
+  font-family: 'Geist', 'Instrument Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.wl-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  margin-top: 20px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background: #2f6b3f;
+  color: #fff;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0;
+  transition: background-color 0.3s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.wl-btn svg { transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+.wl-btn:hover { background: #255832; transform: translateY(-2px); }
+.wl-btn:hover svg { transform: translateX(3px); }
+
+.wl-empty {
+  padding: 60px 0;
+  text-align: center;
+  color: #16211a;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .wl { padding: 32px 80px 80px; }
+
+  .wl-filters { gap: 0.4vw; margin-bottom: 3.4vw; padding: 0.4vw; }
+  .wl-pill {
+    height: clamp(30px, 2.5vw, 48px);
+    padding: 0 clamp(12px, 1.1vw, 20px);
+    font-size: clamp(11px, 0.95vw, 18px);
+  }
+
+  .wl-row {
+    grid-template-columns: 41% 1fr;
+    column-gap: 2.85cqw;
+    padding: 3.2cqw 0;
+    align-items: stretch;
+  }
+
+  .wl-media { border-radius: 3.2cqw; aspect-ratio: auto; height: auto; min-height: 100%; }
+  .wl-media img { aspect-ratio: 1.3; }
+
+  .wl-title { font-size: clamp(26px, 3.653cqw, 66px); }
+  .wl-text {
+    margin-top: 2cqw;
+    max-width: 39cqw;
+    font-size: clamp(14px, 1.33cqw, 24px);
+    line-height: clamp(21px, 1.9cqw, 34px);
+  }
+  .wl-tags { gap: 1cqw; margin-top: 2.4cqw; }
+  .wl-tags li {
+    height: clamp(28px, 2.5cqw, 44px);
+    padding: 0 1.1cqw;
+    font-size: clamp(12px, 1.14cqw, 20px);
+  }
+  .wl-btn {
+    margin-top: auto;
+    height: clamp(40px, 3.25cqw, 58px);
+    padding: 0 1.9cqw;
+    border-radius: 0.7cqw;
+    font-size: clamp(13px, 1.14cqw, 20px);
+    line-height: clamp(20px, 1.826cqw, 32px);
+  }
+  .wl-body { padding-top: 0.2cqw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wl-media img, .wl-btn, .wl-btn svg, .wl-pill { transition: none; }
+}
