@@ -5,9 +5,9 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
-      className="fixed z-40 right-4 bottom-4 md:right-[40px] md:bottom-[40px] flex items-center justify-center w-14 h-14 md:w-[87px] md:h-[87px] rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] text-[#25d366] transition-transform duration-300 hover:scale-105"
+      className="fixed z-40 right-4 bottom-4 md:right-[32px] md:bottom-[32px] flex items-center justify-center w-12 h-12 md:w-[60px] md:h-[60px] rounded-full bg-white shadow-[0_8px_24px_rgba(0,0,0,0.15)] text-[#25d366] transition-transform duration-300 hover:scale-105"
     >
-      <svg viewBox="0 0 24 24" className="w-7 h-7 md:w-[46px] md:h-[46px]" fill="currentColor" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="w-6 h-6 md:w-[32px] md:h-[32px]" fill="currentColor" aria-hidden="true">
         <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48a9 9 0 0 1-1.65-2.06c-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.7.3 1.26.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.05 21.8a9.9 9.9 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.9 9.9 0 0 1-1.52-5.3c0-5.46 4.45-9.9 9.92-9.9 2.65 0 5.14 1.03 7.01 2.9a9.84 9.84 0 0 1 2.9 7.01c0 5.46-4.46 9.92-9.94 9.92zM20.5 3.49A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.95L0 24l6.3-1.65a11.9 11.9 0 0 0 5.74 1.46h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.44-8.43z" />
       </svg>
     </a>
