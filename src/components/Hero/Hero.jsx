@@ -27,7 +27,8 @@ export default function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        poster="/videos/home-poster.webp"
         aria-hidden="true"
       >
         <source src="/videos/home.webm" type="video/webm" />

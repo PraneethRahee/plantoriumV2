@@ -10,6 +10,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    minify: 'terser'
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          react: ['react', 'react-dom'],
+          gsap: ['gsap', 'gsap/ScrollTrigger'],
+          lenis: ['lenis']
+        }
+      }
+    }
   }
 })

@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import './PageHero.css'
 
-export default function PageHero({ title, current, image, video, separator = '|', spec = false }) {
+export default function PageHero({ title, current, image, video, poster, separator = '|', spec = false }) {
   const root = useRef(null)
   const videoEl = useRef(null)
 
@@ -33,7 +33,8 @@ export default function PageHero({ title, current, image, video, separator = '|'
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="auto"
+          poster={poster}
           aria-hidden="true"
         >
           <source src={video} type="video/webm" />

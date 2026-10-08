@@ -38,7 +38,7 @@ function Step({ s }) {
     <div className="oa-item oa-card-wrap">
       <article className="oa-card">
         <div className="oa-card-in">
-          <img className="oa-icon" src={s.icon} alt="" aria-hidden="true" />
+          <img className="oa-icon" src={s.icon} alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <h3 className="oa-card-title">{s.title}</h3>
           <p className="oa-card-text">{s.text}</p>
         </div>
@@ -137,7 +137,7 @@ export default function OurApproach() {
 
       <div className="oa-closing">
         <p>One continuous process. One accountable team.</p>
-        <img src="/assets/home/sign.webp" alt="" aria-hidden="true" />
+        <img src="/assets/home/sign.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" />
       </div>
     </section>
   )

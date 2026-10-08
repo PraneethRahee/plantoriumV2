@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, Suspense } from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
 import Navbar from './components/Navbar/Navbar'
@@ -33,7 +33,9 @@ function Shell() {
   return (
     <div className="min-h-screen bg-light">
       <Navbar />
-      <Page key={path} />
+      <Suspense fallback={<div className="route-fallback" aria-hidden="true" />}>
+        <Page key={path} />
+      </Suspense>
       <Footer />
       {!['/work', '/services', '/about', '/contact'].includes(path) && <WhatsAppButton />}
       <PageLoader />

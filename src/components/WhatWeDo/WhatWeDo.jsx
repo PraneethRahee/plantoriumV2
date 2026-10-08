@@ -113,7 +113,7 @@ export default function WhatWeDo({
         {services.map((s) => (
           <div key={s.n} className="wwd-item">
             <article className="wwd-card">
-              <img className="wwd-icon" src={s.icon} alt="" aria-hidden="true" width="48" height="48" />
+              <img className="wwd-icon" src={s.icon} alt="" aria-hidden="true" width="48" height="48" loading="lazy" decoding="async" />
               <h3 className="wwd-card-title">{s.title}</h3>
               <p className="wwd-card-text">{s.text}</p>
               <span className="wwd-num" aria-hidden="true">{s.n}</span>

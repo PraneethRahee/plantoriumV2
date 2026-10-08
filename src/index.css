@@ -120,3 +120,5 @@ h4 {
 ::-webkit-scrollbar-thumb:hover {
   background: #0f3d2f;
 }
+
+.route-fallback { min-height: 100vh; min-height: 100svh; background: #edf2ec; }
